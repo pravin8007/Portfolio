@@ -5,7 +5,7 @@ import Alarm from "../assets/projects/Alaram.png";
 import YT from "../assets/projects/Youtube.png";
 import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
-// import { image } from "framer-motion/client"
+
 
 export const HERO_CONTENT = `I am a frontend developer passionate about crafting seamless, responsive, and visually striking user experiences. Skilled in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I'm eager to bring fresh ideas and energy to a collaborative team. I'm seeking a role where I can contribute to innovative projects, push creative boundaries, and continually grow my technical expertise, aiming to make a significant impact in a forward-thinking environment.`;
 
