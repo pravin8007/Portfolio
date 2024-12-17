@@ -2,7 +2,7 @@ import PostalCode from "../assets/projects/PostalCode.png";
 import ReactCalculaor from "../assets/projects/React-Calculator.png";
 import TODO from "../assets/projects/TODO.jpg";
 import Alarm from "../assets/projects/Alaram.png";
-import YT from "../assets/projects/YouTube.png";
+import YT from "../assets/projects/Youtube.png";
 import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
 // import { image } from "framer-motion/client"
