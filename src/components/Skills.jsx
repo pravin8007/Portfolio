@@ -20,11 +20,11 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="border-b border-neutral-500 mt-4 pb-24 lg:py-24"
+            className="border-b border-neutral-500 mt-8 pt-10 pb-24 lg:py-24"
         >
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
+                initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
                 className="text-center text-4xl text-white font-semibold hover:tracking-widest transition-all duration-300 ease-in-out"
             >
@@ -118,12 +118,12 @@ const Skills = () => {
                     </div>
                 </motion.div>
 
-                {/* Other Skills */}
-                <motion.div
+                {/* Other Skills */} 
+                <motion.div 
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: 100 }}
                     transition={{ duration: 0.5 }}
-                    className="border-2 rounded-2xl lg:py-24 pb-8 m-4 sm:p-10 bg-slate-900 hover:bg-black"
+                    className="border-2 rounded-2xl lg:py-24 p-6 m-4 sm:p-10 bg-slate-900 hover:bg-black hover:scale-105 duration-700 ease-in-out"
                 >
                     <h1 className="text-2xl font-serif text-cyan-500 text-center mb-8 mt-10 lg:mt-0">
                         &lt; Tools /&gt;

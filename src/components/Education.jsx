@@ -7,7 +7,7 @@ function Education() {
         <section id="education" className="border-b border-neutral-500 pb-24 mt-10 mb-6 lg:py-16">
             <motion.h1 
               whileInView={{opacity:1 , y : 0 }}
-              initial={{opacity:0 , y : -100}}
+              initial={{opacity:0 , y : -50}}
               transition={{duration:0.2}} 
               className="text-center text-4xl text-white lg:my-6 my-8 font-semibold hover:tracking-widest transition-all duration-300 ease-in-out">
                 &lt; Education /&gt;
