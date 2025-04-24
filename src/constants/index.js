@@ -6,13 +6,14 @@ import YT from "../assets/projects/Youtube.png";
 import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
 
+export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong skills in React.js. I focus on creating smooth, responsive, and attractive user experiences. With experience in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I enjoy turning ideas into interactive web applications that are easy for users to engage with.
 
-export const HERO_CONTENT = `I am a Frontend Developer at Vodafone Idea Limited, passionate about crafting seamless, responsive, and visually striking user experiences. With expertise in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I contribute to building efficient automation solutions. I thrive in a collaborative environment, continuously enhancing my technical skills to drive innovation and efficiency. My goal is to push creative boundaries, optimize workflows, and make a significant impact through cutting-edge frontend development.`;
+After completing a full stack web development course, I’ve gained the ability to build modern, scalable web solutions and work on team projects. I’m always learning and looking for ways to improve, aiming to create clean, high-performance websites that make an impact.`;
 
-export const ABOUT_TEXT_1 = `👋Hello! I'm Pravin Patil from Jalgaon, Maharashtra. Currently pursuing an MCA, I work as a React Developer in the Automation department at Vodafone Idea Limited. I specialize in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js, creating efficient and user-friendly web applications.`;
+export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra. I’m currently pursuing MCA and have a strong passion for web development, with a particular focus on React.js. I specialize in creating efficient, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js.`;
 export const ABOUT_TEXT_2 = `I work well in teams and believe that collaboration is the key to creating great products. I'm adaptable and quick to pick up new technologies, which helps me stay current in the fast-changing tech world. `;
 export const ABOUT_TEXT_3 = `I love solving problems and continuously seek opportunities to learn and grow in web development. Being adaptable and eager to explore new technologies helps me stay up-to-date and deliver cutting-edge solutions.`;
-export const ABOUT_TEXT_4 = `I'm excited to leverage my skills and experience as a React Developer at Vodafone Idea Limited to build innovative and impactful solutions. Let’s connect and explore how we can collaborate on creating something amazing !`;
+export const ABOUT_TEXT_4 = `I’m excited to apply my skills and knowledge to build innovative web applications. Let’s connect and explore how we can collaborate to create something amazing!`;
 
 export const EDUCATION = [
   {
