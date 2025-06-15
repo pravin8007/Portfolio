@@ -5,6 +5,7 @@ import Alarm from "../assets/projects/Alaram.png";
 import YT from "../assets/projects/Youtube.png";
 import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
+import CryptoTracker from "../assets/projects/CryptoTracker.png"
 
 export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong skills in React.js. I focus on creating smooth, responsive, and attractive user experiences. With experience in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I enjoy turning ideas into interactive web applications that are easy for users to engage with.
 
@@ -42,6 +43,22 @@ export const EDUCATION = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Crypto-Tracker",
+    image: CryptoTracker, 
+    code: "https://github.com/pravin8007/crypto-tracker", 
+    live: "https://crypto-tracker-beryl-chi.vercel.app/",
+    description:
+      "A real-time cryptocurrency tracking app that allows users to monitor coin prices, analyze market trends, and manage a personalized watchlist. Includes price charts, comparison tools, and filtering by market cap.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Chart.js",
+      "CoinGecko API",
+    ],
+  },
   {
     title: "Financial-Tracker",
     image: Financial,
