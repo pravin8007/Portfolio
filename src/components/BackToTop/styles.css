@@ -1,0 +1,65 @@
+.btt-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+}
+
+
+.btt-btn:hover {
+  transform: translateY(-2px);
+  border: 2px solid black;
+  background-color: white;
+}
+
+.btt-btn:hover .btt-icon {
+  color: black;
+}
+
+.btt-btn:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+.btt-btn--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btt-btn--hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.btt-icon {
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+  .btt-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+}
