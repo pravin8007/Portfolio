@@ -28,7 +28,7 @@ const Hero = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.4 }}
-                            href="https://drive.google.com/file/d/14mWuUMYyeMpC6AoNTbGbSpOyNInBpFNF/view?usp=drive_link"
+                            href="https://drive.google.com/file/d/1VxCOWfWwAbBqYajP_ORlDtGbFq2Uq37F/view?usp=drive_link"
                             target="_blank"
                             rel="noreferrer"
                             className="text-slate-200 my-6 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block">

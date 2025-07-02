@@ -19,13 +19,13 @@ export const ABOUT_TEXT_4 = `I’m excited to apply my skills and knowledge to b
 export const EDUCATION = [
   {
     title: "Master of Computer Applications (MCA)",
-    year: "2023 - Present",
-    CGPA: "",
+    year: "2023 - 2025",
+    CGPA: "7.06",
     company: "KCES's Institute Of Management & Research, Jalgaon.",
     description: [
-      "Pursuing Master of Computer Applications with a focus on advanced computer science concepts.",
-      "Deepening knowledge in algorithms, data structures, and software engineering principles.",
-      "Engaging in practical projects to bridge the gap between theory and hands-on application, particularly in web development.",
+      "Completed Master of Computer Applications with a focus on advanced computer science principles.",
+      "Strengthened understanding of algorithms, data structures, and software engineering methodologies.",
+      "Applied theoretical concepts through hands-on projects, particularly in web development and software design.",
     ],
   },
 
