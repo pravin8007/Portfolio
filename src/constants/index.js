@@ -11,7 +11,7 @@ export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong s
 
 After completing a full stack web development course, I’ve gained the ability to build modern, scalable web solutions and work on team projects. I’m always learning and looking for ways to improve, aiming to create clean, high-performance websites that make an impact.`;
 
-export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra. I’m currently pursuing MCA and have a strong passion for web development, with a particular focus on React.js. I specialize in creating efficient, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js.`;
+export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra. I Have Recently Completed MCA and have a strong passion for web development, with a particular focus on React.js. I specialize in creating efficient, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js.`;
 export const ABOUT_TEXT_2 = `I work well in teams and believe that collaboration is the key to creating great products. I'm adaptable and quick to pick up new technologies, which helps me stay current in the fast-changing tech world. `;
 export const ABOUT_TEXT_3 = `I love solving problems and continuously seek opportunities to learn and grow in web development. Being adaptable and eager to explore new technologies helps me stay up-to-date and deliver cutting-edge solutions.`;
 export const ABOUT_TEXT_4 = `I’m excited to apply my skills and knowledge to build innovative web applications. Let’s connect and explore how we can collaborate to create something amazing!`;

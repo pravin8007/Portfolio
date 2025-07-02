@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { RiReactjsLine } from "react-icons/ri";
-import {SiHtml5,SiCss3,SiJavascript,SiRedux, SiBootstrap,SiTailwindcss} from "react-icons/si";
+import {SiHtml5,SiCss3,SiJavascript,SiTypescript, SiRedux, SiBootstrap,SiTailwindcss} from "react-icons/si";
 import {SiGit,SiGithub,SiPostman,SiVercel,SiVisualstudiocode,SiFigma} from "react-icons/si";
 
 const Skills = () => {
@@ -90,6 +90,15 @@ const Skills = () => {
                         >
                             <SiJavascript className="text-5xl text-cyan-400" />
                             <span className="text-white">JS</span>
+                        </motion.div>
+                        <motion.div
+                            variants={iconVariant(2.2)}
+                            initial="initial"
+                            animate="animate"
+                            className="rounded-2xl border-2 border-neutral-400 text-center bg-blue-600  px-5 py-2"
+                        >
+                            <SiTypescript className="text-5xl text-cyan-400" />
+                            <span className="text-white">TS</span>
                         </motion.div>
 
                         <motion.div
