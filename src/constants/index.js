@@ -23,7 +23,7 @@ export const EDUCATION = [
     CGPA: "7.06",
     company: "KCES's Institute Of Management & Research, Jalgaon.",
     description: [
-      "Completed Master of Computer Applications with a focus on advanced computer science principles.",
+      "Completed Master of Computer Applications (MCA) with emphasis on software development and practical computing skills.",
       "Strengthened understanding of algorithms, data structures, and software engineering methodologies.",
       "Applied theoretical concepts through hands-on projects, particularly in web development and software design.",
     ],
