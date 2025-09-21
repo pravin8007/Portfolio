@@ -17,28 +17,30 @@ const About = () => {
             hover:tracking-widest transition-all duration-300 ease-in-out">
                 &lt; About <span className="text-neutral-300 ">Me /&gt; </span> </motion.h1>
             <div className="flex flex-wrap justify-around">
-                <motion.div
+                <motion.img
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full lg:w-1/4 lg:p-4">
-                    <div className="flex items-center justify-center">
-                        <img src={pravinImg} alt="about-img" className="rounded-3xl " />
-                    </div>
-                </motion.div>
+                    src={pravinImg}
+                    alt="about-img"
+                    className="w-full max-w-xs sm:max-w-sm lg:w-1/4 lg:p-4 rounded-3xl object-cover"
+                />
+
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: 100 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full lg:w-1/2 my-6">
+                    className="w-full lg:w-1/2 my-6"
+                >
                     <div className="flex flex-col justify-center lg:justify-start">
-                        <p className="my-4 max-w-xl ">{ABOUT_TEXT_1}</p>
-                        <p className="mb-4 max-w-xl ">{ABOUT_TEXT_2}</p>
-                        <p className="mb-4 max-w-xl ">{ABOUT_TEXT_3}</p>
-                        <p className="max-w-xl ">{ABOUT_TEXT_4}</p>
+                        <p className="my-4 max-w-xl">{ABOUT_TEXT_1}</p>
+                        <p className="mb-4 max-w-xl">{ABOUT_TEXT_2}</p>
+                        <p className="mb-4 max-w-xl">{ABOUT_TEXT_3}</p>
+                        <p className="max-w-xl">{ABOUT_TEXT_4}</p>
                     </div>
                 </motion.div>
             </div>
+
         </section>
     )
 }

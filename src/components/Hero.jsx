@@ -17,7 +17,7 @@ const Hero = () => {
                         <motion.span
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration:  0.4 }}
+                            transition={{ duration: 0.4 }}
                             className="text-center lg:text-start bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">Frontend Developer</motion.span>
                         <motion.p
                             whileInView={{ opacity: 1, x: 0 }}
@@ -28,12 +28,14 @@ const Hero = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.4 }}
-                            href="https://drive.google.com/file/d/19c1T2k3mjTGVAy7Z_U4vZZkENzwCVwh_/view?usp=drive_link"
+                            href="https://drive.google.com/file/d/19c1T2k3mjTGVAy7Z_U4vZZkENzwCVwh_/view"
                             target="_blank"
                             rel="noreferrer"
-                            className="text-slate-200 my-6 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block">
+                            className="text-slate-200 my-6 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block"
+                        >
                             Check Resume
                         </motion.a>
+
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center">
