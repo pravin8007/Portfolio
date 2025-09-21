@@ -1,4 +1,4 @@
-import pravinImg from "../assets/About-Img.jpg";
+import pravinImg from "../assets/Profile.png";
 import { ABOUT_TEXT_1 } from "../constants/index"
 import { ABOUT_TEXT_2 } from "../constants/index"
 import { ABOUT_TEXT_3 } from "../constants/index"
@@ -21,9 +21,9 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.8 }}
-                    className="w-full lg:w-1/3 lg:p-4">
+                    className="w-full lg:w-1/4 lg:p-4">
                     <div className="flex items-center justify-center">
-                        <img src={pravinImg} alt="about-img" className="rounded-2xl " />
+                        <img src={pravinImg} alt="about-img" className="rounded-3xl " />
                     </div>
                 </motion.div>
                 <motion.div
