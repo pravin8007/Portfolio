@@ -5,7 +5,8 @@ import Alarm from "../assets/projects/Alaram.png";
 import YT from "../assets/projects/Youtube.png";
 import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
-import CryptoTracker from "../assets/projects/CryptoTracker.png"
+import CryptoTracker from "../assets/projects/CryptoTracker.png";
+import Taskify from "../assets/projects/Taskify.png";
 
 export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong skills in React.js. I focus on creating smooth, responsive, and attractive user experiences. With experience in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I enjoy turning ideas into interactive web applications that are easy for users to engage with.
 
@@ -45,8 +46,8 @@ export const EDUCATION = [
 export const PROJECTS = [
   {
     title: "Crypto-Tracker",
-    image: CryptoTracker, 
-    code: "https://github.com/pravin8007/crypto-tracker", 
+    image: CryptoTracker,
+    code: "https://github.com/pravin8007/crypto-tracker",
     live: "https://crypto-tracker-beryl-chi.vercel.app/",
     description:
       "A real-time cryptocurrency tracking app that allows users to monitor coin prices, analyze market trends, and manage a personalized watchlist. Includes price charts, comparison tools, and filtering by market cap.",
@@ -67,6 +68,15 @@ export const PROJECTS = [
     description:
       "A financial tracker app helps users manage their expenses, track spending, and set budgets. It often includes features for categorizing transactions, generating reports, and setting financial goals.",
     technologies: ["HTML", "CSS", "Javascript", "React", "Firebase"],
+  },
+  {
+    title: "Taskify",
+    image: Taskify,
+    code: "https://github.com/pravin8007/Taskify",
+    live: "https://taskify-nine-topaz.vercel.app/",
+    description:
+      "Taskify is a feature-rich to-do application built with React and TypeScript that allows users to add, edit, delete, and mark tasks as complete. It demonstrates efficient state management, component reusability, and clean UI design.",
+    technologies: ["HTML", "CSS", "TypeScript", "React"],
   },
   {
     title: "React Calculator",
