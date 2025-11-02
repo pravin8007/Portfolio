@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { RiReactjsLine } from "react-icons/ri";
+import { RiReactjsLine, RiNextjsLine } from "react-icons/ri";
 import {SiHtml5,SiCss3,SiJavascript,SiTypescript, SiRedux, SiBootstrap,SiTailwindcss} from "react-icons/si";
 import {SiGit,SiGithub,SiPostman,SiVercel,SiVisualstudiocode,SiFigma} from "react-icons/si";
 
@@ -42,6 +42,16 @@ const Skills = () => {
                     </h1>
 
                     <div className="flex flex-wrap justify-center items-center max-w-80 gap-4">
+                         <motion.div
+                            variants={iconVariant(2.1)}
+                            initial="initial"
+                            animate="animate"
+                            className="rounded-2xl border-2 border-neutral-400 text-center bg-black px-5 py-2"
+                        >
+                            <RiNextjsLine className="text-5xl text-cyan-400" />
+                            <span className="text-white">Next.js</span>
+                        </motion.div>
+
                         <motion.div
                             variants={iconVariant(2.1)}
                             initial="initial"
