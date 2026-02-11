@@ -46,7 +46,7 @@ const Navbar = () => {
                 <a href="#projects" className="text-2xl text-slate-200 hover:text-white " title="Projects">
                     <IoApps />
                 </a>
-                <a href="#contact" className="text-2xl text-slate-200 hover:text-white" title="Contact">
+                <a href="contact" className="text-2xl text-slate-200 hover:text-white" title="Contact">
                     <IoMail />
                 </a>
             </motion.div>

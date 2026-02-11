@@ -7,6 +7,7 @@ import GoogleSheet from "../assets/projects/GoogleSheet.png";
 import Financial from "../assets/projects/PageTitle.png";
 import CryptoTracker from "../assets/projects/CryptoTracker.png";
 import Taskify from "../assets/projects/Taskify.png";
+import InventoryManagement from "../assets/projects/Inventory.png";
 
 export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong skills in React.js. I focus on creating smooth, responsive, and attractive user experiences. With experience in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I enjoy turning ideas into interactive web applications that are easy for users to engage with.
 
@@ -68,6 +69,15 @@ export const PROJECTS = [
     description:
       "A financial tracker app helps users manage their expenses, track spending, and set budgets. It often includes features for categorizing transactions, generating reports, and setting financial goals.",
     technologies: ["HTML", "CSS", "Javascript", "React", "Firebase"],
+  },
+  {
+    title: "Inventory Management System",
+    image: InventoryManagement,
+    code: "https://github.com/pravin8007/Inventory-Management-System",
+    live: "https://inventory-management-system-beta-liard.vercel.app/",
+    description:
+      "An inventory management system helps users track and manage product stock, monitor inventory levels, and organize product data efficiently. It includes features for adding and updating products, viewing stock insights, and maintaining real-time inventory updates through an interactive dashboard.",
+    technologies: ["React.js", "Redux Toolkit", "Tailwind CSS", "JavaScript"],
   },
   {
     title: "Taskify",
