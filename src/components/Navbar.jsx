@@ -17,10 +17,12 @@ const Navbar = () => {
 
             {/* Logo */}
             <motion.div
+                onClick={() => (window.location.href = "/")}
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
-                className="flex flex-shrink-0 items-center ">
+                className="flex flex-shrink-0 items-center cursor-pointer"
+            >
                 <img src={logo} alt="logo" className="h-12 w-20" />
             </motion.div>
 

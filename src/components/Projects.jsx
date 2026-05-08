@@ -13,15 +13,15 @@ function Projects() {
                 className="lg:mt-20 my-8 text-center text-4xl text-white font-semibold hover:tracking-widest transition-all duration-300 ease-in-out">
                 &lt; Projects /&gt;
             </motion.h1>
-            <div>
+            <div className="flex flex-col items-center">
                 {
                     PROJECTS.map((project, index) => (
-                        <div key={index} className="flex flex-wrap mb-8 p-4 bg-neutral-800 lg:bg-transparent lg:justify-center rounded-2xl">
+                        <div key={index} className="flex flex-wrap lg:w-3/5 mb-8 p-4 bg-neutral-800 lg:justify-center lg:items-center rounded-2xl">
                             <motion.div
                                 whileInView={{ opacity: 1, x: 0 }}
                                 initial={{ opacity: 0, x: -100 }}
                                 transition={{ duration: 1 }}
-                                className="w-full lg:w-1/4 flex justify-center items-center ">
+                                className="w-full lg:w-1/4 ">
                                 <img src={project.image} alt="project.title" className="w-full h-full lg:w-[170px] lg:h-[170px] mb-6 rounded" />
                             </motion.div>
 
@@ -29,7 +29,7 @@ function Projects() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 initial={{ opacity: 0, x: 100 }}
                                 transition={{ duration: 1 }}
-                                className="flex flex-col w-full max-w-xl lg:w-3/4 gap-4">
+                                className="flex flex-col w-full mt-4 md:mt-0 max-w-xl lg:w-3/4 gap-4">
                                 <div className="flex items-center justify-between gap-4">
                                     <h6 className="text-xl font-bold text-white">{project.title}</h6>
                                    <div className="flex gap-4">
@@ -42,7 +42,7 @@ function Projects() {
                                    </div>
 
                                 </div>
-                                <p className="text-neutral-400">{project.description}</p>
+                                <p className="text-neutral-300">{project.description}</p>
                                 <ul className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech, i) => (
                                         <li key={i} className="text-white bg-indigo-500 hover:bg-indigo-700 px-3 py-1 rounded-xl">{tech}</li>

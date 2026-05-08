@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 const About = () => {
     return (
-        <section id="about" className="border-b border-neutral-900 mt-10 lg:py-8">
+        <section id="about" className="border-b border-neutral-900 mt-10 lg:py-12">
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.4 }}
-                className=" text-center text-4xl text-white my-10 lg:mt-14 font-semibold 
+                className=" text-center text-4xl text-white my-10 lg:mt-20 font-semibold 
             hover:tracking-widest transition-all duration-300 ease-in-out">
                 &lt; About <span className="text-neutral-300 ">Me /&gt; </span> </motion.h1>
             <div className="flex flex-wrap justify-around">

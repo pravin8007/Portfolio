@@ -9,14 +9,15 @@ import CryptoTracker from "../assets/projects/CryptoTracker.png";
 import Taskify from "../assets/projects/Taskify.png";
 import InventoryManagement from "../assets/projects/Inventory.png";
 
-export const HERO_CONTENT = `I’m a passionate Frontend Developer with strong skills in React.js. I focus on creating smooth, responsive, and attractive user experiences. With experience in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js, and Redux, I enjoy turning ideas into interactive web applications that are easy for users to engage with.
+export const HERO_CONTENT = `Frontend Developer with hands-on experience building scalable, responsive, and high-performance web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS. Skilled in developing modern Single Page Applications with reusable component architecture, React Hooks, REST API integrations, and responsive user interfaces. Experienced collaborating with backend and QA teams in Agile environments to deliver production-ready features and seamless user experiences. Passionate about writing clean, maintainable code, optimizing application performance, and building modern digital products with a strong focus on usability and design.`
 
-After completing a full stack web development course, I’ve gained the ability to build modern, scalable web solutions and work on team projects. I’m always learning and looking for ways to improve, aiming to create clean, high-performance websites that make an impact.`;
+export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra, a Frontend Developer passionate about building responsive and modern web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS.`;
 
-export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra. I Have Recently Completed MCA and have a strong passion for web development, with a particular focus on React.js. I specialize in creating efficient, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js.`;
-export const ABOUT_TEXT_2 = `I work well in teams and believe that collaboration is the key to creating great products. I'm adaptable and quick to pick up new technologies, which helps me stay current in the fast-changing tech world. `;
-export const ABOUT_TEXT_3 = `I love solving problems and continuously seek opportunities to learn and grow in web development. Being adaptable and eager to explore new technologies helps me stay up-to-date and deliver cutting-edge solutions.`;
-export const ABOUT_TEXT_4 = `I’m excited to apply my skills and knowledge to build innovative web applications. Let’s connect and explore how we can collaborate to create something amazing!`;
+export const ABOUT_TEXT_2 = `I Have completed MCA and have hands-on experience developing scalable Single Page Applications, reusable UI components, and REST API integrations with modern frontend technologies.`;
+
+export const ABOUT_TEXT_3 = `I completed a 100+ day coding streak at AccioJob, successfully finished Full Stack Web Development training, and maintained a top 10% academic ranking during my BCA program.`;
+
+export const ABOUT_TEXT_4 = `I enjoy solving problems, learning new technologies, collaborating with teams, and creating clean, high-performance user experiences for modern digital products.`;
 
 export const EDUCATION = [
   {
@@ -34,7 +35,7 @@ export const EDUCATION = [
   {
     title: "Bachelor of Computer Applications (BCA)",
     year: "2020 - 2023",
-    CGPA: "9.45",
+    CGPA: "9.45 ( Maintained a top 10% academic ranking)",
     company: "KCES's Institute Of Management & Research, Jalgaon.",
     description: [
       "Graduated with a top-tier CGPA.",

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { RiReactjsLine, RiNextjsLine } from "react-icons/ri";
-import {SiHtml5,SiCss3,SiJavascript,SiTypescript, SiRedux, SiBootstrap,SiTailwindcss} from "react-icons/si";
-import {SiGit,SiGithub,SiPostman,SiVercel,SiVisualstudiocode,SiFigma} from "react-icons/si";
+import {SiHtml5,SiCss3,SiJavascript,SiTypescript, SiRedux, SiBootstrap,SiTailwindcss,} from "react-icons/si";
+import {SiGit,SiGithub,SiGitlab,SiVitest ,SiPostman,SiVercel,SiVisualstudiocode,SiFigma} from "react-icons/si";
 
 const Skills = () => {
     const iconVariant = (duration) => ({
@@ -26,11 +26,11 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="text-center text-4xl text-white font-semibold hover:tracking-widest transition-all duration-300 ease-in-out"
+                className="text-center text-4xl mt-4 text-white font-semibold hover:tracking-widest transition-all duration-300 ease-in-out"
             >
                 &lt; Skills /&gt;
             </motion.h1>
-            <div className="flex flex-wrap items-center justify-center mt-2 gap-4 overflow-hidden ">
+            <div className="flex flex-wrap items-center justify-center mt-10 gap-4 overflow-hidden ">
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}
@@ -142,9 +142,9 @@ const Skills = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: 100 }}
                     transition={{ duration: 0.5 }}
-                    className="border-2 rounded-2xl lg:py-24 p-6 m-4 sm:p-10 bg-slate-900 hover:bg-black hover:scale-105 duration-700 ease-in-out"
+                    className="border-2 rounded-2xl p-6 m-4 sm:p-10 bg-slate-900 hover:bg-black hover:scale-105 duration-700 ease-in-out"
                 >
-                    <h1 className="text-2xl font-serif text-cyan-500 text-center mb-8 mt-10 lg:mt-0">
+                    <h1 className="text-xl sm:text-2xl font-serif text-cyan-500 text-center my-4">
                         &lt; Tools /&gt;
                     </h1>
 
@@ -167,6 +167,26 @@ const Skills = () => {
                         >
                             <SiGithub className="text-5xl text-cyan-400" />
                             <span className="text-white">Github</span>
+                        </motion.div>
+
+                        <motion.div
+                            variants={iconVariant(2.2)}
+                            initial="initial"
+                            animate="animate"
+                            className="rounded-2xl border-2 border-neutral-400 text-center bg-white px-5 py-2"
+                        >
+                            <SiGitlab className="text-5xl text-red-700" />
+                            <span className="text-red-700">GitLab</span>
+                        </motion.div>
+
+                        <motion.div
+                            variants={iconVariant(2.2)}
+                            initial="initial"
+                            animate="animate"
+                            className="rounded-2xl border-2 border-neutral-400 text-center bg-black px-5 py-2"
+                        >
+                            <SiVitest className="text-5xl text-yellow-300" />
+                            <span className="text-yellow-300">Vitest</span>
                         </motion.div>
 
                         <motion.div
