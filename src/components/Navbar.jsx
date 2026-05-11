@@ -27,7 +27,7 @@ const Navbar = () => {
             </motion.div>
 
 
-            {/* Nav Links */}
+
             <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 0 }}
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </a>
             </motion.div>
 
-            {/* Social Icons */}
+    
             <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}

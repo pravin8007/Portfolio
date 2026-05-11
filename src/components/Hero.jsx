@@ -38,7 +38,7 @@ const Hero = () => {
 
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center">
+                <div className="hidden lg:flex w-full lg:w-1/2 lg:p-8 items-center justify-center">
                     <div className="flex justify-center">
                         <motion.img
                             whileInView={{ opacity: 1, x: 0 }}
