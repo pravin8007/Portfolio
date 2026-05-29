@@ -15,7 +15,6 @@ const Navbar = () => {
             transition={{ duration: 1 }}
             className="bg-slate-500 border-b border-t rounded-3xl border-slate-700 backdrop-blur fixed top-0 left-4 right-4 z-10 flex items-center justify-between px-6 py-2 m-2">
 
-            {/* Logo */}
             <motion.div
                 onClick={() => (window.location.href = "/")}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -42,18 +41,18 @@ const Navbar = () => {
                 <a href="#skills" className="text-2xl text-slate-200 hover:text-white" title="Skills">
                     <IoBook />
                 </a>
-                <a href="#education" className="text-2xl text-slate-200 hover:text-white " title="Education">
-                    <RiGraduationCapFill />
-                </a>
                 <a href="#projects" className="text-2xl text-slate-200 hover:text-white " title="Projects">
                     <IoApps />
+                </a>
+                <a href="#education" className="text-2xl text-slate-200 hover:text-white " title="Education">
+                    <RiGraduationCapFill />
                 </a>
                 <a href="#contact" className="text-2xl text-slate-200 hover:text-white" title="Contact">
                     <IoMail />
                 </a>
             </motion.div>
 
-    
+
             <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
