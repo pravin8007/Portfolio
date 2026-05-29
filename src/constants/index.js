@@ -8,8 +8,9 @@ import Financial from "../assets/projects/PageTitle.png";
 import CryptoTracker from "../assets/projects/CryptoTracker.png";
 import Taskify from "../assets/projects/Taskify.png";
 import InventoryManagement from "../assets/projects/Inventory.png";
+import PayrollManagement from "../assets/projects/PayrollManagement.png";
 
-export const HERO_CONTENT = `Frontend Developer with hands-on experience building scalable, responsive, and high-performance web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS. Skilled in developing modern Single Page Applications with reusable component architecture, React Hooks, REST API integrations, and responsive user interfaces. Experienced collaborating with backend and QA teams in Agile environments to deliver production-ready features and seamless user experiences. Passionate about writing clean, maintainable code, optimizing application performance, and building modern digital products with a strong focus on usability and design.`
+export const HERO_CONTENT = `Frontend Developer with hands-on experience building scalable, responsive, and high-performance web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS. Skilled in developing modern Single Page Applications with reusable component architecture, React Hooks, REST API integrations, and responsive user interfaces. Experienced collaborating with backend and QA teams in Agile environments to deliver production-ready features and seamless user experiences. Passionate about writing clean, maintainable code, optimizing application performance, and building modern digital products with a strong focus on usability and design.`;
 
 export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra, a Frontend Developer passionate about building responsive and modern web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS.`;
 
@@ -70,6 +71,15 @@ export const PROJECTS = [
     description:
       "A financial tracker app helps users manage their expenses, track spending, and set budgets. It often includes features for categorizing transactions, generating reports, and setting financial goals.",
     technologies: ["HTML", "CSS", "Javascript", "React", "Firebase"],
+  },
+  {
+    title: "Payroll Management System",
+    image: PayrollManagement ,
+    code: "https://github.com/pravin8007/Payroll-Management-System",
+    live: "https://payroll-management-system-navy.vercel.app/",
+    description:
+      "A payroll management system helps organizations manage employee payroll operations efficiently. It includes features for employee management, attendance tracking, salary calculation, payslip generation, and payroll record maintenance through an interactive dashboard with real-time updates.",
+    technologies: ["React.js", "Redux Toolkit", "Tailwind CSS", "JavaScript"],
   },
   {
     title: "Inventory Management System",
