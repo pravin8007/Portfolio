@@ -13,7 +13,7 @@ const Hero = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.2 }}
-                            className="pb-16 text-6xl dark:text-gray-300 dark:font-thin tracking-tight lg:mt-16 lg:text-8xl">Pravin Patil</motion.h1>
+                            className="pb-8 text-6xl dark:text-gray-300 dark:font-thin tracking-tight lg:mt-16 lg:text-8xl">Pravin Patil</motion.h1>
                         <motion.span
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -100 }}
@@ -31,7 +31,7 @@ const Hero = () => {
                             href="https://drive.google.com/file/d/11_thRCPgHQbZDHAHxTOe99RSmgNuXVn1/view"
                             target="_blank"
                             rel="noreferrer"
-                            className="text-slate-200 my-6 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block"
+                            className="text-slate-200 my-4 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block"
                         >
                             Check Resume
                         </motion.a>
