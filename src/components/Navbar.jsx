@@ -1,78 +1,81 @@
-import logo from "../assets/Logo_02.png";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { RiGraduationCapFill } from "react-icons/ri";
-import { IoMdHome } from "react-icons/io";
-import { IoPerson, IoApps, IoMail, IoBook } from "react-icons/io5";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import logo from "../assets/Logo_02.png";
 
-const Navbar = () => {
+const LINKS = [
+    ["Home", "#home"],
+    ["About", "#about"],
+    ["Skills", "#skills"],
+    ["Projects", "#projects"],
+    ["Education", "#education"],
+    ["Contact", "#contact"],
+];
+
+export default function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <motion.nav
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -50 }}
-            transition={{ duration: 1 }}
-            className="bg-slate-500 border-b border-t rounded-3xl border-slate-700 backdrop-blur fixed top-0 left-4 right-4 z-10 flex items-center justify-between px-6 py-2 m-2">
+        <motion.header
+            initial={{ opacity: 0, y: -18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55 }}
+            className="site-nav fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-[#050a14]/80 backdrop-blur-xl"
+        >
+            <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-10" aria-label="Main navigation">
+                <a href="#home" aria-label="Pravin Patil home" onClick={() => setMenuOpen(false)} className="shrink-0">
+                    <img src={logo} alt="Pravin Patil logo" className="h-10 w-auto" />
+                </a>
 
-            <motion.div
-                onClick={() => (window.location.href = "/")}
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 1.5 }}
-                className="flex flex-shrink-0 items-center cursor-pointer"
-            >
-                <img src={logo} alt="logo" className="h-12 w-20" />
-            </motion.div>
+                <div className="hidden items-center gap-6 md:flex lg:gap-8">
+                    {LINKS.map(([label, href], index) => (
+                        <a key={href} href={href} className={`nav-link ${index === 0 ? "nav-link-active" : ""}`}>
+                            {label}
+                        </a>
+                    ))}
+                </div>
 
+                <div className="hidden items-center gap-4 md:flex">
+                    <a href="https://github.com/pravin8007" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="nav-social"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/pravin-patil-528922216/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="nav-social"><FaLinkedin /></a>
+                    <a
+                        href="https://drive.google.com/file/d/1b4MMgm-XserNbHmUtDYAp5EuAJmAW5cw/view"
+                        target="_blank" rel="noreferrer"
+                        className="resume-link inline-flex items-center gap-2 rounded-full border border-cyan-400/80 px-4 py-2 text-sm font-medium text-cyan-300 transition-all duration-300 hover:bg-cyan-300 hover:text-slate-950 sm:px-5"
+                    >
+                        <span aria-hidden="true">↓</span> Resume
+                    </a>
+                </div>
 
+                <button
+                    type="button"
+                    className="mobile-menu-button md:hidden"
+                    aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                    aria-expanded={menuOpen}
+                    onClick={() => setMenuOpen((open) => !open)}
+                >
+                    {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+                </button>
+            </nav>
 
-            <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 0 }}
-                transition={{ duration: 1.5 }}
-                className="navLinks hidden md:flex items-center justify-center border rounded-lg h-14 gap-6 px-2 ms-20">
-                <a href="#home" className="text-3xl text-slate-200 hover:text-white" title="Home">
-                    <IoMdHome />
-                </a>
-                <a href="#about" className="text-2xl text-slate-200 hover:text-white " title="About">
-                    <IoPerson />
-                </a>
-                <a href="#skills" className="text-2xl text-slate-200 hover:text-white" title="Skills">
-                    <IoBook />
-                </a>
-                <a href="#projects" className="text-2xl text-slate-200 hover:text-white " title="Projects">
-                    <IoApps />
-                </a>
-                <a href="#education" className="text-2xl text-slate-200 hover:text-white " title="Education">
-                    <RiGraduationCapFill />
-                </a>
-                <a href="#contact" className="text-2xl text-slate-200 hover:text-white" title="Contact">
-                    <IoMail />
-                </a>
-            </motion.div>
-
-
-            <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 1.5 }}
-                className="flex items-center gap-4">
-                <a href="https://www.linkedin.com/in/pravin-patil-528922216/" target="_blank" rel="noreferrer" className="text-2xl text-slate-200 hover:text-blue-400">
-                    <FaLinkedin />
-                </a>
-                <a href="https://github.com/pravin8007" target="_blank" rel="noreferrer" className="text-2xl text-slate-200 hover:text-white">
-                    <FaGithub />
-                </a>
-                <a href="https://x.com/Pravin_Patil_07" target="_blank" rel="noreferrer" className="text-2xl text-slate-200 hover:text-white">
-                    <FaSquareXTwitter />
-                </a>
-            </motion.div>
-
-        </motion.nav>
-    )
+            {menuOpen && (
+                <div className="mobile-menu md:hidden">
+                    {LINKS.map(([label, href]) => (
+                        <a key={href} href={href} onClick={() => setMenuOpen(false)} className="mobile-menu-link">{label}</a>
+                    ))}
+                    <a
+                        href="https://drive.google.com/file/d/1b4MMgm-XserNbHmUtDYAp5EuAJmAW5cw/view"
+                        target="_blank" rel="noreferrer" className="mobile-resume-link"
+                    >
+                        ↓ Download Resume
+                    </a>
+                    <div className="flex gap-5 px-4 py-3 text-xl">
+                        <a href="https://github.com/pravin8007" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/pravin-patil-528922216/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                    </div>
+                </div>
+            )}
+        </motion.header>
+    );
 }
-
-
-
-export default Navbar

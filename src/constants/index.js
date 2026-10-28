@@ -10,7 +10,7 @@ import Taskify from "../assets/projects/Taskify.png";
 import InventoryManagement from "../assets/projects/Inventory.png";
 import PayrollManagement from "../assets/projects/PayrollManagement.png";
 
-export const HERO_CONTENT = `Frontend Developer with Full Stack experience building scalable, responsive, and high-performance web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS. Skilled in developing modern Single Page Applications with reusable component architecture, React Hooks, RESTful API integration, and clean, maintainable state management. Comfortable working across the stack with Node.js, Express.js, FastAPI, and Firebase, and experienced collaborating with backend and QA teams in Agile environments to deliver production-ready features. Focused on writing clean, efficient code, optimizing application performance, and building polished digital products with a strong emphasis on usability and design.`;
+
 export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra, a Frontend Developer passionate about building responsive and modern web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS.`;
 
 export const ABOUT_TEXT_2 = `I Have completed MCA and have hands-on experience developing scalable Single Page Applications, reusable UI components, and REST API integrations with modern frontend technologies.`;

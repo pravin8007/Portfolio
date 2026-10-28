@@ -1,45 +1,27 @@
-import { useState, useEffect } from 'react';
-import { MdNorth } from "react-icons/md";
-import "./styles.css";
+import { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
-function BackToTop() {
-    const [isVisible, setIsVisible] = useState(false);
+export default function BackToTop() {
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const scrollFunction = () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
-
-        window.addEventListener('scroll', scrollFunction);
-
-        return () => {
-            window.removeEventListener('scroll', scrollFunction);
-        };
+        const handleScroll = () => setVisible(window.scrollY > 420);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
+    if (!visible) return null;
 
     return (
-
         <button
-            className={`btt-btn ${isVisible ? 'btt-btn--visible' : 'btt-btn--hidden'}`}
-            onClick={scrollToTop}
             type="button"
-            style={{ display: isVisible ? 'flex' : 'none' }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="Back to top"
+            title="Back to top"
+            className="back-to-top"
         >
-            <MdNorth className="btt-icon" />
+            <FaArrowUp />
         </button>
-
     );
 }
-
-export default BackToTop;

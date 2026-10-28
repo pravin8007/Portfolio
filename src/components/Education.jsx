@@ -1,57 +1,38 @@
-import { motion } from "framer-motion"
-import { EDUCATION } from "../constants/index"
+import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa";
+import { EDUCATION } from "../constants/index";
 
-
-function Education() {
+export default function Education() {
     return (
-        <section id="education" className="border-b border-neutral-500 pb-24 mt-10 mb-6 lg:py-16">
-            <motion.h1 
-              whileInView={{opacity:1 , y : 0 }}
-              initial={{opacity:0 , y : -50}}
-              transition={{duration:0.2}} 
-              className="text-center text-4xl text-white lg:my-6 my-8 font-semibold hover:tracking-widest transition-all duration-300 ease-in-out">
-                &lt; Education /&gt;
-            </motion.h1>
-            <div className="flex justify-center items-center mt-4 ">
-                <div className="flex flex-col justify-center gap-2">
-                    {EDUCATION.map((edu, index) => (
-                        (index==0 ? 
-                            <motion.div 
-                            whileInView={{opacity:1 , y : 0 }}
-                            initial={{opacity:0 , y : -100}}
-                            transition={{duration:0.5}}
-                            key={index} className="flex flex-col flex-wrap gap-2 mb-4 p-6 lg:p-6 border-2 rounded-lg hover:scale-105 duration-700 ease-in-out">
-                                <h3 className="text-2xl font-bold ">{edu.title}</h3>
-                                <p className="text-gray-400">{edu.company}</p>
-                                <span className="text-blue-400 italic">{edu.year}</span>
-                                {edu.CGPA && <p className="text-yellow-400"><strong>CGPA:</strong> {edu.CGPA}</p>}
-                                <ul className="list-disc list-inside mt-2">
-                                    {edu.description.map((desc, i) => (
-                                        <li key={i} className="text-gray-300">{desc}</li>
-                                    ))}
-                                </ul>
-                            </motion.div> :
-                            <motion.div
-                            whileInView={{opacity:1 , y : 0 }}
-                            initial={{opacity:0 , y : 100}}
-                            transition={{duration:0.5}}
-                            key={index} className="flex flex-col flex-wrap gap-2 mb-4 p-6 lg:p-6 border-2 rounded-lg hover:scale-105 duration-700 ease-in-out">
-                                <h3 className="text-2xl font-bold ">{edu.title}</h3>
-                                <p className="text-gray-400">{edu.company}</p>
-                                <span className="text-blue-400 italic">{edu.year}</span>
-                                {edu.CGPA && <p className="text-yellow-400"><strong>CGPA:</strong> {edu.CGPA}</p>}
-                                <ul className="list-disc list-inside mt-2">
-                                    {edu.description.map((desc, i) => (
-                                        <li key={i} className="text-gray-300">{desc}</li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        )
-                    ))}
-                </div>
+        <section id="education" className="section-shell content-section">
+            <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="section-heading">
+                <p className="eyebrow">Academic background</p>
+                <h2 className="section-title"><span className="text-cyan-400">&lt;</span> Education <span className="text-indigo-400">/&gt;</span></h2>
+                <p className="section-subtitle">The learning and foundations behind my development journey.</p>
+            </motion.div>
+
+            <div className="education-timeline mx-auto max-w-4xl">
+                {EDUCATION.map((edu, index) => (
+                    <motion.article key={edu.title} initial={{ opacity: 0, x: index % 2 ? 18 : -18 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="education-card">
+                        <div className="education-icon"><FaGraduationCap /></div>
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                                <div>
+                                    <h3 className="text-lg font-semibold text-white sm:text-xl">{edu.title}</h3>
+                                    <p className="mt-1 text-sm text-slate-400">{edu.company}</p>
+                                </div>
+                                <span className="education-year">{edu.year}</span>
+                            </div>
+                            {edu.CGPA && <p className="text-sm text-cyan-200">CGPA: {edu.CGPA}</p>}
+                            <ul className="space-y-2">
+                                {edu.description.map((description, itemIndex) => (
+                                    <li key={itemIndex} className="education-bullet">{description}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.article>
+                ))}
             </div>
         </section>
-    )
+    );
 }
-
-export default Education

@@ -1,48 +1,50 @@
-import pravinImg from "../assets/Profile.png";
-import { ABOUT_TEXT_1 } from "../constants/index"
-import { ABOUT_TEXT_2 } from "../constants/index"
-import { ABOUT_TEXT_3 } from "../constants/index"
-import { ABOUT_TEXT_4 } from "../constants/index"
 import { motion } from "framer-motion";
+import pravinImg from "../assets/Profile.png";
+import { ABOUT_TEXT_1, ABOUT_TEXT_2, ABOUT_TEXT_3, ABOUT_TEXT_4 } from "../constants/index";
+import { FaCode, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 
+const HIGHLIGHTS = [
+    { icon: FaCode, title: "Frontend Development", detail: "Responsive interfaces and reusable React components." },
+    { icon: FaLaptopCode, title: "Practical Projects", detail: "Interactive apps using APIs, state, and Firebase." },
+    { icon: FaGraduationCap, title: "Continuous Learning", detail: "MCA graduate with a strong foundation in web development." },
+];
 
-const About = () => {
+export default function About() {
     return (
-        <section id="about" className="border-b border-neutral-900 mt-10 lg:py-12">
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.4 }}
-                className=" text-center text-4xl text-white my-10 lg:mt-20 font-semibold 
-            hover:tracking-widest transition-all duration-300 ease-in-out">
-                &lt; About <span className="text-neutral-300 ">Me /&gt; </span> </motion.h1>
-            <div className="flex flex-wrap justify-around">
-                <motion.img
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.8 }}
-                    src={pravinImg}
-                    alt="about-img"
-                    className="w-full max-w-xs sm:max-w-sm lg:w-1/4 lg:p-4 rounded-3xl object-cover"
-                />
+        <section id="about" className="section-shell content-section">
+            <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="section-heading">
+                <p className="eyebrow">A little about me</p>
+                <h2 className="section-title"><span className="text-cyan-400">&lt;</span> About Me <span className="text-indigo-400">/&gt;</span></h2>
+            </motion.div>
 
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.8 }}
-                    className="w-full lg:w-1/2 my-6"
-                >
-                    <div className="flex flex-col justify-center lg:justify-start">
-                        <p className="my-4 max-w-xl">{ABOUT_TEXT_1}</p>
-                        <p className="mb-4 max-w-xl">{ABOUT_TEXT_2}</p>
-                        <p className="mb-4 max-w-xl">{ABOUT_TEXT_3}</p>
-                        <p className="max-w-xl">{ABOUT_TEXT_4}</p>
+            <div className="grid items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
+                <motion.div initial={{ opacity: 0, x: -22 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="about-photo-card mx-auto w-full max-w-sm">
+                    <div className="about-photo-frame">
+                        <img src={pravinImg} alt="Pravin Patil" loading="lazy" className="about-photo" />
+                    </div>
+                    <div className="about-photo-caption">
+                        <span className="status-dot" />
+                        <span>Building, learning, improving</span>
+                    </div>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, x: 22 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="min-w-0">
+                    <div className="about-copy">
+                        {[ABOUT_TEXT_1, ABOUT_TEXT_2, ABOUT_TEXT_3, ABOUT_TEXT_4].map((paragraph, index) => (
+                            <p key={index}>{paragraph.replace(/^👋\s*/, "")}</p>
+                        ))}
+                    </div>
+                    <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                        {HIGHLIGHTS.map(({ icon: Icon, title, detail }) => (
+                            <article key={title} className="mini-feature-card">
+                                <Icon className="mb-3 text-xl text-cyan-300" />
+                                <h3 className="text-sm font-semibold text-slate-100">{title}</h3>
+                                <p className="mt-2 text-xs leading-5 text-slate-400">{detail}</p>
+                            </article>
+                        ))}
                     </div>
                 </motion.div>
             </div>
-
         </section>
-    )
+    );
 }
-
-export default About

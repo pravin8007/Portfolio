@@ -1,352 +1,279 @@
-
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { RiNextjsLine, RiReactjsLine } from "react-icons/ri";
-
 import {
-    SiHtml5,
-    SiCss3,
-    SiJavascript,
-    SiTypescript,
-    SiRedux,
-    SiBootstrap,
-    SiTailwindcss,
-    SiNodedotjs,
-    SiExpress,
-    SiMongodb,
-    SiMysql,
-    SiGit,
-    SiGithub,
-    SiGitlab,
-    SiVitest,
-    SiPostman,
-    SiVercel,
-    SiVisualstudiocode,
-    SiFigma,
+  SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiReactrouter,
+  SiTailwindcss,
+  SiBootstrap,
+  SiMui,
+  SiAntdesign,
+  SiFramer,
+  SiNodedotjs,
+  SiExpress,
+  SiFastapi,
+  SiFirebase,
+  SiMongodb,
+  SiMysql,
+  SiJest,
+  SiVitest,
+  SiTestinglibrary,
+  SiGit,
+  SiGithub,
+  SiGitlab,
+  SiVite,
+  SiPostman,
+  SiFigma,
+  SiVercel,
 } from "react-icons/si";
+import {
+  FaCode,
+  FaLayerGroup,
+  FaServer,
+  FaDatabase,
+  FaVial,
+  FaTools,
+  FaBolt,
+  FaPuzzlePiece,
+} from "react-icons/fa";
 
-const Skills = () => {
-    const iconVariant = (duration) => ({
-        initial: { y: -5 },
-        animate: {
-            y: [5, -5],
-            transition: {
-                duration,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "reverse",
-            },
-        },
-    });
+const skillGroups = [
+  {
+    title: "Building Interfaces",
+    description: "From reusable components to responsive layouts.",
+    icon: FaLayerGroup,
+    color: "#67e8f9",
+    skills: [
+      { name: "React", icon: SiReact },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss3 },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "React Router", icon: SiReactrouter },
+    ],
+  },
+  {
+    title: "UI & Experience",
+    description: "Polished interfaces with thoughtful interactions.",
+    icon: FaPuzzlePiece,
+    color: "#c4b5fd",
+    skills: [
+      { name: "Material UI", icon: SiMui },
+      { name: "Ant Design", icon: SiAntdesign },
+      { name: "Framer Motion", icon: SiFramer },
+      { name: "React-Toastify", icon: FaBolt },
+      { name: "Responsive Design", icon: FaLayerGroup },
+      { name: "Component Design", icon: FaCode },
+    ],
+  },
+  {
+    title: "State & Data Flow",
+    description: "Keeping application data predictable and connected.",
+    icon: FaCode,
+    color: "#86efac",
+    skills: [
+      { name: "Redux", icon: SiRedux },
+      { name: "Redux Toolkit", icon: SiRedux },
+      { name: "React Hooks", icon: SiReact },
+      { name: "REST APIs", icon: FaServer },
+      { name: "API Integration", icon: FaBolt },
+      { name: "Firebase Auth", icon: SiFirebase },
+    ],
+  },
+  {
+    title: "Backend & Storage",
+    description: "Working with services, APIs, and persistent data.",
+    icon: FaDatabase,
+    color: "#fcd34d",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express.js", icon: SiExpress },
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "Firestore", icon: SiFirebase },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "MySQL", icon: SiMysql },
+      { name: "SQL Basics", icon: FaDatabase },
+    ],
+  },
+  {
+    title: "Quality & Debugging",
+    description: "Finding issues and building confidence in code.",
+    icon: FaVial,
+    color: "#f9a8d4",
+    skills: [
+      { name: "Jest", icon: SiJest },
+      { name: "Vitest", icon: SiVitest },
+      { name: "React Testing Library", icon: SiTestinglibrary },
+      { name: "Unit Testing", icon: FaVial },
+      { name: "Component Testing", icon: FaCode },
+      { name: "Debugging", icon: FaTools },
+    ],
+  },
+  {
+    title: "Workflow & Delivery",
+    description: "Tools for collaboration, development, and deployment.",
+    icon: FaTools,
+    color: "#fdba74",
+    skills: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "GitLab", icon: SiGitlab },
+      { name: "Vite", icon: SiVite },
+      { name: "Postman", icon: SiPostman },
+      { name: "Figma", icon: SiFigma },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Agile / Scrum", icon: FaPuzzlePiece },
+      { name: "Performance Optimization", icon: FaBolt },
+    ],
+  },
+];
 
-    const skillCard =
-        "w-24 h-24 rounded-2xl border border-neutral-700 bg-neutral-900/80 hover:bg-neutral-800 hover:border-cyan-500/60 transition-all duration-300 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-cyan-500/10";
-
-    const iconClass = "text-4xl";
-
-    return (
-        <section
-            id="skills"
-            className="border-b border-neutral-500 mt-8 pt-10 pb-24 lg:py-24"
-        >
-
-            <motion.h1
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.5 }}
-                className="text-center text-4xl mt-4 text-white font-semibold hover:tracking-widest transition-all duration-300 ease-in-out"
-            >
-                &lt; Skills /&gt;
-            </motion.h1>
-
-            <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 0.7 }}
-                className="max-w-6xl mx-auto mt-8 border-2 border-neutral-700 rounded-3xl p-8 bg-slate-700 hover:bg-black duration-700 ease-in-out"
-            >
-
-                
-                    <h1 className="text-2xl sm:text-3xl font-serif text-cyan-500 text-center mb-8">
-                        &lt; Web Technology /&gt;
-                    </h1>
-
-                    <div className="flex flex-wrap justify-center items-center gap-4">
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <RiReactjsLine className={`${iconClass} text-[#61DAFB]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                React
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiRedux className={`${iconClass} text-[#764ABC]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Redux
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiHtml5 className={`${iconClass} text-[#E34F26]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                HTML5
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiCss3 className={`${iconClass} text-[#1572B6]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                CSS3
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiJavascript className={`${iconClass} text-[#F7DF1E]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                JavaScript
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiTypescript className={`${iconClass} text-[#3178C6]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                TypeScript
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <RiNextjsLine className={`${iconClass} text-white`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Next.js
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiBootstrap className={`${iconClass} text-[#7952B3]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Bootstrap
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiTailwindcss className={`${iconClass} text-[#06B6D4]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Tailwind
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiNodedotjs className={`${iconClass} text-[#339933]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Node.js
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.4)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiExpress className={`${iconClass} text-white`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Express.js
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.2)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiMongodb className={`${iconClass} text-[#47A248]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                MongoDB
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiMysql className={`${iconClass} text-[#4479A1]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                MySQL
-                            </span>
-                        </motion.div>
-                
-                </div>
-
-
-                <div className="w-full h-[1px] bg-neutral-900 my-12"></div>
-
-                <div>
-                    <h1 className="text-2xl sm:text-3xl font-serif text-cyan-500 text-center mb-8">
-                        &lt; Tools /&gt;
-                    </h1>
-
-                    <div className="flex flex-wrap justify-center items-center gap-4">
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiGit className={`${iconClass} text-[#F05032]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Git
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiGithub className={`${iconClass} text-white`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                GitHub
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiGitlab className={`${iconClass} text-[#FC6D26]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                GitLab
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiVitest className={`${iconClass} text-[#6E9F18]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Vitest
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiPostman className={`${iconClass} text-[#FF6C37]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Postman
-                            </span>
-                        </motion.div>
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiVercel className={`${iconClass} text-white`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Vercel
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.1)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiVisualstudiocode className={`${iconClass} text-[#007ACC]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                VS Code
-                            </span>
-                        </motion.div>
-
-
-                        <motion.div
-                            variants={iconVariant(2.3)}
-                            initial="initial"
-                            animate="animate"
-                            className={skillCard}
-                        >
-                            <SiFigma className={`${iconClass} text-[#F24E1E]`} />
-                            <span className="text-white mt-2 text-xs font-bold">
-                                Figma
-                            </span>
-                        </motion.div>
-                        
-                    </div>
-                </div>
-            </motion.div>
-        </section>
-    );
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.09,
+    },
+  },
 };
 
-export default Skills;
+const cardVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
+};
+
+function SkillPill({ skill, accent }) {
+  const Icon = skill.icon;
+
+  return (
+    <motion.span
+      whileHover={{ y: -3, scale: 1.035 }}
+      transition={{ duration: 0.18 }}
+      className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.035] px-3 py-2 text-xs font-medium text-slate-300 transition-colors hover:border-white/20 hover:bg-white/[0.07] hover:text-white sm:text-sm"
+    >
+      <Icon
+        className="shrink-0 text-sm"
+        style={{ color: accent }}
+        aria-hidden="true"
+      />
+      {skill.name}
+    </motion.span>
+  );
+}
+
+export default function Skills() {
+  return (
+    <section
+      id="skills"
+      className="relative overflow-hidden bg-[#080b14] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
+    >
+      {/* Ambient background */}
+      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.07] blur-[120px]" />
+      <div className="pointer-events-none absolute -right-40 bottom-10 h-80 w-80 rounded-full bg-violet-500/[0.08] blur-[130px]" />
+
+      <div className="relative mx-auto max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 max-w-2xl sm:mb-16"
+        >
+          <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
+            <span className="h-px w-7 bg-cyan-300" />
+            What I work with
+          </p>
+
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            Skills &{" "}
+            <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
+              technologies
+            </span>
+          </h2>
+
+          <p className="mt-5 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+            The tools and technologies I use to build interfaces, connect data,
+            solve problems, and turn ideas into working applications.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.08 }}
+          className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {skillGroups.map((group) => {
+            const GroupIcon = group.icon;
+
+            return (
+              <motion.article
+                key={group.title}
+                variants={cardVariants}
+                className="group relative rounded-2xl border border-white/[0.08] bg-[#0d111d]/90 p-5 transition-colors duration-300 hover:border-white/[0.16] sm:p-6"
+              >
+                <div
+                  className="pointer-events-none absolute inset-x-6 top-0 h-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${group.color}, transparent)`,
+                  }}
+                />
+
+                <div className="mb-5 flex items-start gap-3">
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04]"
+                    style={{ color: group.color }}
+                  >
+                    <GroupIcon className="text-lg" aria-hidden="true" />
+                  </div>
+
+                  <div>
+                    <h3 className="text-base font-semibold text-slate-100">
+                      {group.title}
+                    </h3>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {group.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <SkillPill
+                      key={skill.name}
+                      skill={skill}
+                      accent={group.color}
+                    />
+                  ))}
+                </div>
+              </motion.article>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+
+SkillPill.propTypes = {
+  skill: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    icon: PropTypes.elementType.isRequired,
+  }).isRequired,
+  accent: PropTypes.string.isRequired,
+};

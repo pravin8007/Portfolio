@@ -1,55 +1,57 @@
-import { HERO_CONTENT } from "../constants"
-import PravinPic from "../assets/Pravin-Logo.png"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMdOpen } from "react-icons/io";
 
-const Hero = () => {
-
+export default function Hero() {
     return (
-        <section id="home" className="border-b border-neutral-900 pt-28 lg:pt-20 lg:mb-34">
-            <div className="flex flex-wrap">
-                <div className="w-full lg:w-1/2 md:mt-5">
-                    <div className="flex flex-col items-center lg:items-start">
-                        <motion.h1
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.2 }}
-                            className="pb-8 text-6xl dark:text-gray-300 dark:font-thin tracking-tight lg:mt-16 lg:text-8xl">Pravin Patil</motion.h1>
-                        <motion.span
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.4 }}
-                            className="text-center lg:text-start bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">Frontend Developer</motion.span>
-                        <motion.p
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.6 }}
-                            className="my-2 max-w-xl py-6 font-light tracking-tight">{HERO_CONTENT}</motion.p>
-                        <motion.a
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.4 }}
-                            href="https://drive.google.com/file/d/1b4MMgm-XserNbHmUtDYAp5EuAJmAW5cw/view"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-slate-200 my-4 transition duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-pink-500 via-slate-500 to-purple-700 font-bold py-2 px-4 rounded-full inline-block"
-                        >
-                            Check Resume
-                        </motion.a>
+        <section id="home" className="hero-section section-shell">
+            <div className="hero-orb hero-orb-cyan" aria-hidden="true" />
+            <div className="hero-orb hero-orb-violet" aria-hidden="true" />
+            <div className="grid items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
+                <div className="relative z-10">
+                    <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="mb-3 text-lg font-medium text-cyan-300 sm:text-xl">
+                        Hello, I&apos;m
+                    </motion.p>
+                    <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.05 }} className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                        Pravin <span className="gradient-name">Patil</span>
+                    </motion.h1>
+                    <motion.h2 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.12 }} className="mt-4 text-2xl font-medium text-sky-300 sm:text-3xl">
+                        Frontend Developer
+                    </motion.h2>
+                    <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }} className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+                        I build clean, responsive, and user-friendly web experiences using React.js, JavaScript, and TypeScript.
+                    </motion.p>
+                    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.24 }} className="mt-7 flex flex-wrap items-center gap-4">
+                        <a href="#projects" className="primary-cta">View Projects <span aria-hidden="true">→</span></a>
+                        <a href="#contact" className="secondary-cta">Contact Me <span aria-hidden="true">→</span></a>
+                    </motion.div>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.35 }} className="mt-8 flex items-center gap-5 text-xl text-slate-300">
+                        <a href="https://github.com/pravin8007" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="social-link"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/pravin-patil-528922216/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="social-link"><FaLinkedin /></a>
+                        <a href="https://drive.google.com/file/d/1b4MMgm-XserNbHmUtDYAp5EuAJmAW5cw/view" target="_blank" rel="noreferrer" aria-label="Open resume" className="social-link"><IoMdOpen /></a>
+                    </motion.div>
+                </div>
 
+                <motion.div initial={{ opacity: 0, x: 22, scale: 0.98 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="code-window relative z-10 mx-auto w-full max-w-xl" aria-label="Code-themed developer panel">
+                    <div className="code-window-header">
+                        <span className="window-dot window-dot-red" />
+                        <span className="window-dot window-dot-yellow" />
+                        <span className="window-dot window-dot-green" />
+                        <span className="ml-auto text-xs text-slate-500">developer.js</span>
                     </div>
-                </div>
-                <div className="hidden lg:flex w-full lg:w-1/2 lg:p-8 items-center justify-center">
-                    <div className="flex justify-center">
-                        <motion.img
-                            whileInView={{ opacity: 1, x: 0 }}
-                            initial={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 0.8 }}
-                            src={PravinPic} alt="Pravin Patil" className="w-60 h-60 border-4 border-slate-900 rounded-full lg:w-80 lg:h-80" />
-                    </div>
-                </div>
+                    <pre className="code-content"><code>
+                        <span className="code-purple">const</span>{" "}<span className="code-blue">developer</span> = {"{"}{"\n"}
+                        {"  "}name: <span className="code-green">&quot;Pravin Patil&quot;</span>,{"\n"}
+                        {"  "}role: <span className="code-green">&quot;Frontend Developer&quot;</span>,{"\n"}
+                        {"  "}skills: [<span className="code-green">&quot;React&quot;</span>, <span className="code-green">&quot;TypeScript&quot;</span>,{"\n"}
+                        {"           "}<span className="code-green">&quot;JavaScript&quot;</span>, <span className="code-green">&quot;Tailwind CSS&quot;</span>],{"\n"}
+                        {"  "}passion: <span className="code-green">&quot;Building great web experiences&quot;</span>{"\n"}
+                        {"};"}{"\n\n"}
+                        <span className="code-comment">{"// Always learning..."}</span>
+                    </code></pre>
+                </motion.div>
             </div>
+            <a href="#about" className="scroll-cue" aria-label="Scroll to About section"><span /></a>
         </section>
-    )
+    );
 }
-
-export default Hero 
