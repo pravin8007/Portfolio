@@ -32,8 +32,14 @@ export default function Contact() {
             await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY);
             setStatus({ type: "success", message: "Thanks for reaching out! Your message has been sent." });
             setFormData({ user_name: "", user_email: "", user_message: "" });
-        } catch {
-            setStatus({ type: "error", message: "Your message could not be sent. Please try again or contact me by email." });
+        } catch (error) {
+            console.error("EmailJS error:", error);
+
+            setStatus({
+                type: "error",
+                message:
+                    "Your message could not be sent. Please try again or email me directly."
+            });
         } finally {
             setIsSending(false);
         }

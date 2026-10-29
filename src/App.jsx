@@ -19,7 +19,7 @@ export default function App() {
             </div>
             <Spotlight />
             <Navbar />
-            <main className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
+            <main className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10 lg:my-12">
                 <Hero />
                 <About />
                 <Skills />

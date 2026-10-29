@@ -39,7 +39,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#080b14] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-6 lg:my-6"
+      className="relative overflow-hidden bg-[#080b14] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28 lg:my-6"
     >
       {/* Background glow */}
       <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.06] blur-[120px]" />
@@ -139,7 +139,7 @@ function Projects() {
                       <a
                         href={project.live}
                         target="_blank"
-                        rel="noopener noreferrer" 
+                        rel="noopener noreferrer"
                         title={`View ${project.title} live`}
                         aria-label={`Open ${project.title} live project`}
                         className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-slate-400 transition-all duration-200 hover:border-violet-300/30 hover:bg-violet-300/10 hover:text-violet-200"
