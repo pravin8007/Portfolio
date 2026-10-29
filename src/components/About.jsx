@@ -11,10 +11,10 @@ const HIGHLIGHTS = [
 
 export default function About() {
     return (
-        <section id="about" className="section-shell content-section">
+        <section id="about" className="section-shell content-section lg:mt-0 lg:pt-10">
             <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="section-heading">
                 <p className="eyebrow">A little about me</p>
-                <h2 className="section-title"><span className="text-cyan-400">&lt;</span> About Me <span className="text-indigo-400">/&gt;</span></h2>
+                <h2 className="section-title tracking-normal transition-all duration-300 hover:tracking-widest"><span className="text-cyan-400">&lt;</span> About Me <span className="text-indigo-400">/&gt;</span></h2>
             </motion.div>
 
             <div className="grid items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">

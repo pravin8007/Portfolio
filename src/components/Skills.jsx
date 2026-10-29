@@ -1,141 +1,8 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import {
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiCss3,
-  SiReact,
-  SiNextdotjs,
-  SiRedux,
-  SiReactrouter,
-  SiTailwindcss,
-  SiBootstrap,
-  SiMui,
-  SiAntdesign,
-  SiFramer,
-  SiNodedotjs,
-  SiExpress,
-  SiFastapi,
-  SiFirebase,
-  SiMongodb,
-  SiMysql,
-  SiJest,
-  SiVitest,
-  SiTestinglibrary,
-  SiGit,
-  SiGithub,
-  SiGitlab,
-  SiVite,
-  SiPostman,
-  SiFigma,
-  SiVercel,
-} from "react-icons/si";
-import {
-  FaCode,
-  FaLayerGroup,
-  FaServer,
-  FaDatabase,
-  FaVial,
-  FaTools,
-  FaBolt,
-  FaPuzzlePiece,
-} from "react-icons/fa";
+import { skillGroups } from "../constants/index";
 
-const skillGroups = [
-  {
-    title: "Building Interfaces",
-    description: "From reusable components to responsive layouts.",
-    icon: FaLayerGroup,
-    color: "#67e8f9",
-    skills: [
-      { name: "React", icon: SiReact },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "HTML5", icon: SiHtml5 },
-      { name: "CSS3", icon: SiCss3 },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Bootstrap", icon: SiBootstrap },
-      { name: "React Router", icon: SiReactrouter },
-    ],
-  },
-  {
-    title: "UI & Experience",
-    description: "Polished interfaces with thoughtful interactions.",
-    icon: FaPuzzlePiece,
-    color: "#c4b5fd",
-    skills: [
-      { name: "Material UI", icon: SiMui },
-      { name: "Ant Design", icon: SiAntdesign },
-      { name: "Framer Motion", icon: SiFramer },
-      { name: "React-Toastify", icon: FaBolt },
-      { name: "Responsive Design", icon: FaLayerGroup },
-      { name: "Component Design", icon: FaCode },
-    ],
-  },
-  {
-    title: "State & Data Flow",
-    description: "Keeping application data predictable and connected.",
-    icon: FaCode,
-    color: "#86efac",
-    skills: [
-      { name: "Redux", icon: SiRedux },
-      { name: "Redux Toolkit", icon: SiRedux },
-      { name: "React Hooks", icon: SiReact },
-      { name: "REST APIs", icon: FaServer },
-      { name: "API Integration", icon: FaBolt },
-      { name: "Firebase Auth", icon: SiFirebase },
-    ],
-  },
-  {
-    title: "Backend & Storage",
-    description: "Working with services, APIs, and persistent data.",
-    icon: FaDatabase,
-    color: "#fcd34d",
-    skills: [
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express.js", icon: SiExpress },
-      { name: "FastAPI", icon: SiFastapi },
-      { name: "Firebase", icon: SiFirebase },
-      { name: "Firestore", icon: SiFirebase },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "MySQL", icon: SiMysql },
-      { name: "SQL Basics", icon: FaDatabase },
-    ],
-  },
-  {
-    title: "Quality & Debugging",
-    description: "Finding issues and building confidence in code.",
-    icon: FaVial,
-    color: "#f9a8d4",
-    skills: [
-      { name: "Jest", icon: SiJest },
-      { name: "Vitest", icon: SiVitest },
-      { name: "React Testing Library", icon: SiTestinglibrary },
-      { name: "Unit Testing", icon: FaVial },
-      { name: "Component Testing", icon: FaCode },
-      { name: "Debugging", icon: FaTools },
-    ],
-  },
-  {
-    title: "Workflow & Delivery",
-    description: "Tools for collaboration, development, and deployment.",
-    icon: FaTools,
-    color: "#fdba74",
-    skills: [
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
-      { name: "GitLab", icon: SiGitlab },
-      { name: "Vite", icon: SiVite },
-      { name: "Postman", icon: SiPostman },
-      { name: "Figma", icon: SiFigma },
-      { name: "Vercel", icon: SiVercel },
-      { name: "Agile / Scrum", icon: FaPuzzlePiece },
-      { name: "Performance Optimization", icon: FaBolt },
-    ],
-  },
-];
+
 
 const containerVariants = {
   hidden: {},
@@ -178,7 +45,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-[#080b14] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
+      className="relative overflow-hidden bg-[#080b14] rounded-2xl border border-white/[0.08] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28"
     >
       {/* Ambient background */}
       <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.07] blur-[120px]" />

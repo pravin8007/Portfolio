@@ -8,6 +8,7 @@ import logo from "../assets/Logo.png";
 const LINKS = [
     ["Home", "#home"],
     ["About", "#about"],
+    ["Experience", "#experience"],
     ["Skills", "#skills"],
     ["Projects", "#projects"],
     ["Education", "#education"],

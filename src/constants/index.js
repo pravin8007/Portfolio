@@ -10,6 +10,49 @@ import Taskify from "../assets/projects/Taskify.png";
 import InventoryManagement from "../assets/projects/Inventory.png";
 import PayrollManagement from "../assets/projects/PayrollManagement.png";
 
+import {
+  FaBriefcase,
+  FaGraduationCap,
+  FaLayerGroup,
+  FaPuzzlePiece,
+  FaBolt,
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaVial,
+} from "react-icons/fa6";
+import {
+  SiReact,
+  SiJavascript,
+  SiTypescript,
+  SiNextdotjs,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiBootstrap,
+  SiReactrouter,
+  SiMui,
+  SiAntdesign,
+  SiFramer,
+  SiRedux,
+  SiFirebase,
+  SiNodedotjs,
+  SiExpress,
+  SiFastapi,
+  SiMongodb,
+  SiMysql,
+  SiJest,
+  SiVitest,
+  SiTestinglibrary,
+  SiGit,
+  SiGithub,
+  SiGitlab,
+  SiVite,
+  SiPostman,
+  SiFigma,
+  SiVercel,
+} from "react-icons/si";
+import { FaTools } from "react-icons/fa";
 
 export const ABOUT_TEXT_1 = `👋 Hello! I'm Pravin Patil from Jalgaon, Maharashtra, a Frontend Developer passionate about building responsive and modern web applications using React.js, TypeScript, Redux Toolkit, and Tailwind CSS.`;
 
@@ -18,6 +61,66 @@ export const ABOUT_TEXT_2 = `I Have completed MCA and have hands-on experience d
 export const ABOUT_TEXT_3 = `I completed a 100+ day coding streak at AccioJob, successfully finished Full Stack Web Development training, and maintained a top 10% academic ranking during my BCA program.`;
 
 export const ABOUT_TEXT_4 = `I enjoy solving problems, learning new technologies, collaborating with teams, and creating clean, high-performance user experiences for modern digital products.`;
+
+export const EXPERIENCES = [
+  {
+    role: "Frontend Developer",
+    company: "Quess Corp Ltd.",
+    client: "Client: Vodafone Idea Ltd.",
+    period: "Feb 2025 – Apr 2025",
+    location: "Pune, Maharashtra · On-site",
+    type: "Professional Experience",
+    icon: FaBriefcase,
+    accent: "cyan",
+    description:
+      "Developed internal web tools for operational workflows, focusing on reusable UI components, API integration, and responsive interfaces.",
+    responsibilities: [
+      "Developed internal web tools using React.js, TypeScript, and Tailwind CSS to streamline operational workflows.",
+      "Built reusable, responsive UI components and integrated FastAPI services for real-time data handling.",
+      "Collaborated with backend and QA teams in an Agile environment, using Git and GitLab to deliver production-ready features.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "Git",
+      "GitLab",
+      "Agile",
+    ],
+  },
+  {
+    role: "Full Stack Web Developer (Trainee)",
+    company: "AccioJob",
+    client: "Full Stack Web Development Training",
+    period: "May 2023 – Dec 2024",
+    location: "Remote",
+    type: "Training Experience",
+    icon: FaGraduationCap,
+    accent: "violet",
+    description:
+      "Completed practical full-stack web development training, building applications and strengthening frontend development skills.",
+    responsibilities: [
+      "Built and deployed web applications using React.js, Redux Toolkit, REST APIs, and responsive design.",
+      "Practiced component optimization and efficient state management to improve application performance.",
+      "Implemented authentication and API integrations, maintaining version control with Git and GitHub.",
+    ],
+    technologies: [
+      "React.js",
+      "Redux Toolkit",
+      "JavaScript",
+      "REST APIs",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+      "Authentication",
+      "Git",
+      "GitHub",
+    ],
+  },
+];
 
 export const EDUCATION = [
   {
@@ -41,6 +144,101 @@ export const EDUCATION = [
       "Graduated with a top-tier CGPA.",
       "Built a solid foundation in programming languages like C, C++ And Java",
       "Transitioned into web development, starting with core concepts in HTML, CSS, and JavaScript.",
+    ],
+  },
+];
+
+export const skillGroups = [
+  {
+    title: "Building Interfaces",
+    description: "From reusable components to responsive layouts.",
+    icon: FaLayerGroup,
+    color: "#67e8f9",
+    skills: [
+      { name: "React.js", icon: SiReact },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss3 },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "React Router", icon: SiReactrouter },
+    ],
+  },
+  {
+    title: "UI & Experience",
+    description: "Polished interfaces with thoughtful interactions.",
+    icon: FaPuzzlePiece,
+    color: "#c4b5fd",
+    skills: [
+      { name: "Material UI", icon: SiMui },
+      { name: "Ant Design", icon: SiAntdesign },
+      { name: "Framer Motion", icon: SiFramer },
+      { name: "React-Toastify", icon: FaBolt },
+      { name: "Responsive Design", icon: FaLayerGroup },
+      { name: "Component Design", icon: FaCode },
+    ],
+  },
+  {
+    title: "State & Data Flow",
+    description: "Keeping application data predictable and connected.",
+    icon: FaCode,
+    color: "#86efac",
+    skills: [
+      { name: "Redux", icon: SiRedux },
+      { name: "Redux Toolkit", icon: SiRedux },
+      { name: "React Hooks", icon: SiReact },
+      { name: "REST APIs", icon: FaServer },
+      { name: "API Integration", icon: FaBolt },
+      { name: "Firebase Auth", icon: SiFirebase },
+    ],
+  },
+  {
+    title: "Backend & Storage",
+    description: "Working with services, APIs, and persistent data.",
+    icon: FaDatabase,
+    color: "#fcd34d",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express.js", icon: SiExpress },
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "Firestore", icon: SiFirebase },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "MySQL", icon: SiMysql },
+      { name: "SQL Basics", icon: FaDatabase },
+    ],
+  },
+  {
+    title: "Quality & Debugging",
+    description: "Finding issues and building confidence in code.",
+    icon: FaVial,
+    color: "#f9a8d4",
+    skills: [
+      { name: "Jest", icon: SiJest },
+      { name: "Vitest", icon: SiVitest },
+      { name: "React Testing Library", icon: SiTestinglibrary },
+      { name: "Unit Testing", icon: FaVial },
+      { name: "Component Testing", icon: FaCode },
+      { name: "Debugging", icon: FaTools },
+    ],
+  },
+  {
+    title: "Workflow & Delivery",
+    description: "Tools for collaboration, development, and deployment.",
+    icon: FaTools,
+    color: "#fdba74",
+    skills: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "GitLab", icon: SiGitlab },
+      { name: "Vite", icon: SiVite },
+      { name: "Postman", icon: SiPostman },
+      { name: "Figma", icon: SiFigma },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Agile / Scrum", icon: FaPuzzlePiece },
+      { name: "Performance Optimization", icon: FaBolt },
     ],
   },
 ];
@@ -73,7 +271,7 @@ export const PROJECTS = [
   },
   {
     title: "Payroll Management System",
-    image: PayrollManagement ,
+    image: PayrollManagement,
     code: "https://github.com/pravin8007/Payroll-Management-System",
     live: "https://payroll-management-system-navy.vercel.app/",
     description:

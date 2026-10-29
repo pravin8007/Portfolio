@@ -7,7 +7,7 @@ export default function Education() {
         <section id="education" className="section-shell content-section">
             <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="section-heading">
                 <p className="eyebrow">Academic background</p>
-                <h2 className="section-title"><span className="text-cyan-400">&lt;</span> Education <span className="text-indigo-400">/&gt;</span></h2>
+                <h2 className="section-title tracking-normal transition-all duration-300 hover:tracking-widest"><span className="text-cyan-400">&lt;</span> Education <span className="text-indigo-400">/&gt;</span></h2>
                 <p className="section-subtitle">The learning and foundations behind my development journey.</p>
             </motion.div>
 

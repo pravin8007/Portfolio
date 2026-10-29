@@ -49,7 +49,7 @@ export default function Contact() {
         <section id="contact" className="section-shell content-section">
             <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="section-heading">
                 <p className="eyebrow">Let&apos;s connect</p>
-                <h2 className="section-title"><span className="text-cyan-400">&lt;</span> Contact Me <span className="text-indigo-400">/&gt;</span></h2>
+                <h2 className="section-title tracking-normal transition-all duration-300 hover:tracking-widest"><span className="text-cyan-400">&lt;</span> Contact Me <span className="text-indigo-400">/&gt;</span></h2>
                 <p className="section-subtitle">Have an opportunity or project in mind? I&apos;d be happy to hear from you.</p>
             </motion.div>
 

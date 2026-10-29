@@ -39,7 +39,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#080b14] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28 lg:my-6"
+      className="relative overflow-hidden bg-[#080b14] rounded-2xl border border-white/[0.08] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28 lg:my-6"
     >
       {/* Background glow */}
       <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/[0.06] blur-[120px]" />
