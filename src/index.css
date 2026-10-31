@@ -51,7 +51,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .cursor-spotlight.spotlight-active { opacity: 1; }
 
-.site-nav { left: 0; }
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    scroll-target-group: auto;
+}
+
 .nav-link {
     position: relative;
     padding: 0.6rem 0;
@@ -60,7 +69,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transition: color 180ms ease;
 }
 
-.nav-link::after { 
+.nav-link::after {
     content: "";
     position: absolute;
     right: 0;
@@ -71,19 +80,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform-origin: left;
     border-radius: 999px;
     background: #22d3ee;
-    transition: transform 180ms ease;
+    transition: transform 380ms ease;
 }
 
-/* Underline only the active tab */
-.nav-link-active {
+.nav-link:target-current {
     color: #22d3ee;
 }
 
-.nav-link-active::after {
+.nav-link:target-current::after {
     transform: scaleX(1);
 }
 
-/* Hover changes text color only */
 .nav-link:hover {
     color: #22d3ee;
 }

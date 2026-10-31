@@ -20,12 +20,11 @@ const RESUME_URL =
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
         const sections = LINKS
             .map(([, href]) =>
-                document.getElementById(href.slice(0))
+                document.getElementById(href.slice(1))
             )
             .filter(Boolean);
 
@@ -40,7 +39,13 @@ export default function Navbar() {
                     );
 
                 if (visibleSections.length > 0) {
-                    setActiveSection(visibleSections[0].id);
+                    const sectionId = visibleSections[0].target.id;
+
+                    window.history.replaceState(
+                        null,
+                        "",
+                        `#${sectionId}`
+                    );
                 }
             },
             {
@@ -51,25 +56,10 @@ export default function Navbar() {
 
         sections.forEach((section) => observer.observe(section));
 
-        const handleHashChange = () => {
-            const hash = window.location.hash.slice(1);
-
-            if (hash && document.getElementById(hash)) {
-                setActiveSection(hash);
-            }
-        };
-
-        window.addEventListener("hashchange", handleHashChange);
-        handleHashChange();
-
-        return () => {
-            observer.disconnect();
-            window.removeEventListener("hashchange", handleHashChange);
-        };
+        return () => observer.disconnect();
     }, []);
 
-    const handleNavClick = (href) => {
-        setActiveSection(href.slice(1));
+    const handleNavClick = () => {
         setMenuOpen(false);
     };
 
@@ -87,7 +77,7 @@ export default function Navbar() {
                 <a
                     href="#home"
                     aria-label="Pravin Patil home"
-                    onClick={() => handleNavClick("#home")}
+                    onClick={handleNavClick}
                     className="shrink-0"
                 >
                     <img
@@ -98,26 +88,16 @@ export default function Navbar() {
                 </a>
 
                 <div className="hidden items-center gap-6 md:flex lg:gap-8">
-                    {LINKS.map(([label, href]) => {
-                        const isActive =
-                            activeSection === href.slice(1);
-
-                        return (
-                            <a
-                                key={href}
-                                href={href}
-                                onClick={() => handleNavClick(href)}
-                                aria-current={
-                                    isActive ? "location" : undefined
-                                }
-                                className={`nav-link ${
-                                    isActive ? "nav-link-active" : ""
-                                }`}
-                            >
-                                {label}
-                            </a>
-                        );
-                    })}
+                    {LINKS.map(([label, href]) => (
+                        <a
+                            key={href}
+                            href={href}
+                            onClick={handleNavClick}
+                            className="nav-link"
+                        >
+                            {label}
+                        </a>
+                    ))}
                 </div>
 
                 <div className="hidden items-center gap-4 md:flex">
@@ -168,28 +148,16 @@ export default function Navbar() {
 
             {menuOpen && (
                 <div className="mobile-menu md:hidden">
-                    {LINKS.map(([label, href]) => {
-                        const isActive =
-                            activeSection === href.slice(1);
-
-                        return (
-                            <a
-                                key={href}
-                                href={href}
-                                onClick={() => handleNavClick(href)}
-                                aria-current={
-                                    isActive ? "location" : undefined
-                                }
-                                className={`mobile-menu-link ${
-                                    isActive
-                                        ? "mobile-menu-link-active"
-                                        : ""
-                                }`}
-                            >
-                                {label}
-                            </a>
-                        );
-                    })}
+                    {LINKS.map(([label, href]) => (
+                        <a
+                            key={href}
+                            href={href}
+                            onClick={handleNavClick}
+                            className="mobile-menu-link"
+                        >
+                            {label}
+                        </a>
+                    ))}
 
                     <a
                         href={RESUME_URL}
